@@ -1,21 +1,42 @@
+import { Header } from "@/components/header";
+import { Hero } from "@/components/hero";
+import { Experience } from "@/components/experience";
+import { Projects } from "@/components/projects";
+import { Contact } from "@/components/contact";
+
+export const metadata = {
+  title: "Adel Gannem - Developer",
+  description:
+    "Desarrollador Web especializado en React, Next.js, TypeScript y Tailwind CSS. 3 años de experiencia construyendo aplicaciones web modernas.",
+  requiresAuth: false,
+  generator: "v0.app",
+  icons: {
+    icon: [
+      {
+        url: "/icon-light-32x32.png",
+        media: "(prefers-color-scheme: light)",
+      },
+      {
+        url: "/icon-dark-32x32.png",
+        media: "(prefers-color-scheme: dark)",
+      },
+      {
+        url: "/icon.svg",
+        type: "image/svg+xml",
+      },
+    ],
+    apple: "/apple-icon.png",
+  },
+};
+
 export default function Page() {
   return (
-    <div className="hero-container">
-      <div className="gradient-blob top-left"></div>
-      <div className="gradient-blob bottom-right"></div>
-      
-      <div className="glass-panel">
-        <h1 className="hero-title">
-          Hi, I'm <span className="highlight">Adel Gannem</span>
-        </h1>
-        <p className="hero-subtitle">
-          Building amazing web experiences with modern technologies.
-        </p>
-        <div className="cta-group">
-          <button className="btn-primary">View Projects</button>
-          <button className="btn-secondary">Contact Me</button>
-        </div>
-      </div>
-    </div>
+    <main className="min-h-screen">
+      <Header />
+      <Hero />
+      <Experience />
+      <Projects />
+      <Contact />
+    </main>
   );
 }
