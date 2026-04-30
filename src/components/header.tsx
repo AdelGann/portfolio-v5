@@ -33,7 +33,7 @@ export function Header() {
           href="#"
           className="text-lg font-medium hover:text-primary transition-colors"
         >
-          Portfolio
+          AdelGann
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -49,10 +49,10 @@ export function Header() {
         </nav>
 
         <a
-          href="mailto:tu@email.com"
+          href="mailto:imadelg14@gmail.com"
           className="text-sm text-muted-foreground hover:text-primary transition-colors"
         >
-          tu@email.com
+          imadelg14@gmail.com
         </a>
       </div>
     </header>

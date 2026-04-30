@@ -24,7 +24,7 @@ const projects = [
 export function Projects() {
   return (
     <section id="proyectos" className="px-6 md:px-12 lg:px-24 py-24 bg-card/30">
-      <div className="max-w-4xl">
+      <div className="">
         <h2 className="text-sm text-muted-foreground uppercase tracking-widest mb-12">
           Proyectos
         </h2>
@@ -62,7 +62,7 @@ export function Projects() {
               <h3 className="text-xl font-medium mb-3 group-hover:text-primary transition-colors">
                 {project.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-6">
+              <p className="text-muted-foreground max-w-4xl leading-relaxed mb-6">
                 {project.description}
               </p>
 

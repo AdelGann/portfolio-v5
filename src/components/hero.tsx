@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 export function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 py-20">
-      <div className="max-w-4xl">
+      <div className="">
         <div className="mb-6">
           <span className="inline-block px-3 py-1 text-xs font-medium tracking-wider uppercase bg-primary/10 text-primary rounded-full border border-primary/20">
             Disponible para proyectos

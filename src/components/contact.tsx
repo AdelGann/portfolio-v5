@@ -26,7 +26,7 @@ const socialLinks = [
 export function Contact() {
   return (
     <section id="contacto" className="px-6 md:px-12 lg:px-24 py-24">
-      <div className="max-w-4xl">
+      <div className="">
         <h2 className="text-sm text-muted-foreground uppercase tracking-widest mb-8">
           Contacto
         </h2>
