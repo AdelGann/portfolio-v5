@@ -1,13 +1,21 @@
 import { ExternalLink, Github, Folder } from "lucide-react";
 
-const projects = [
+interface Project {
+  title: string;
+  description: string;
+  technologies: string[];
+  github?: string;
+  demo?: string;
+  featured?: boolean;
+}
+
+const projects: Project[] = [
   {
     title: "Amazing Router React",
     description:
       "Implementación oficial para React de Amazing Router. Facilita la adopción de enrutamiento por carpetas similar a Next.js en aplicaciones Vite/React puras, incluyendo soporte avanzado para layouts anidados, rutas de grupo y hooks de contexto.",
     technologies: ["React", "TypeScript", "React Router", "Vite"],
-    github: "",
-
+    github: "https://github.com/AdelGann/amazing-router-react",
     featured: true,
   },
   {
@@ -23,8 +31,6 @@ const projects = [
     description:
       "Sistema integral de gestión (CRM/ERP) con enfoque financiero. Diseñado para centralizar la administración de clientes, facturación y ventas, incorporando paneles analíticos interactivos y módulos avanzados de recursos humanos.",
     technologies: ["React", "Tailwind CSS", "NestJS", "PostgreSQL", "Prisma"],
-    github: "#",
-    demo: "#",
     featured: true,
   },
 ];

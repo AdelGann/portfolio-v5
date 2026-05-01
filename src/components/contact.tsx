@@ -25,7 +25,7 @@ export function Contact() {
       <div className="relative rounded-3xl overflow-hidden border border-border/50 bg-secondary/30 dark:bg-secondary/10 px-6 py-20 md:py-32 text-center">
         {/* Animated gradient background blob */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-primary/10 blur-[120px] rounded-full -z-10 pointer-events-none"></div>
-        
+
         <div className="inline-flex items-center gap-2 px-4 py-2 text-xs font-semibold tracking-widest uppercase bg-background border border-border text-foreground rounded-full mb-8 shadow-sm">
           <span className="relative flex h-2 w-2">
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
@@ -37,9 +37,11 @@ export function Contact() {
         <h2 className="text-5xl md:text-7xl font-bold tracking-tighter mb-6 bg-clip-text text-transparent bg-gradient-to-b from-foreground to-foreground/60">
           Trabajemos juntos
         </h2>
-        
+
         <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto mb-12 text-balance leading-relaxed">
-          Ya sea que tengas una pregunta, una propuesta interesante, o simplemente quieras conectar, mi bandeja de entrada siempre está abierta.
+          Ya sea que tengas una pregunta, una propuesta interesante, o
+          simplemente quieras conectar, mi bandeja de entrada siempre está
+          abierta.
         </p>
 
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -54,7 +56,7 @@ export function Contact() {
             <span className="relative z-10">Envíame un correo</span>
           </a>
           <a
-            href="https://www.linkedin.com/in/adel-gannem/"
+            href="https://www.linkedin.com/preload/custom-invite/?vanityName=adel-gannem&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BpnkCTfnLTP6rrButgeulYw%3D%3D"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-background border border-border hover:bg-secondary hover:-translate-y-1 transition-all duration-300 font-medium"
@@ -83,7 +85,8 @@ export function Contact() {
         </div>
 
         <p className="text-sm text-muted-foreground text-center md:text-right">
-          © {new Date().getFullYear()} AdelGann · Construido con React & Tailwind.
+          © {new Date().getFullYear()} AdelGann · Construido con React &
+          Tailwind.
         </p>
       </div>
     </section>
