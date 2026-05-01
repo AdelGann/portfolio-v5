@@ -16,6 +16,8 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),
+      "amazing-router-routes": path.resolve(__dirname, "./.amazing-router/routes.json"),
+      "amazing-router-route-files": path.resolve(__dirname, "./.amazing-router/routeFiles.ts"),
     },
   },
 });
