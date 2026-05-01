@@ -9,7 +9,6 @@ export const metadata = {
   description:
     "Desarrollador Web especializado en React, Next.js, TypeScript y Tailwind CSS. 3 años de experiencia construyendo aplicaciones web modernas.",
   requiresAuth: false,
-  image: "/icon-light-32x32.png",
 };
 
 export default function Page() {

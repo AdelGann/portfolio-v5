@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { cn } from "@/lib/utils";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const navItems = [
   { label: "Experiencia", href: "#experiencia" },
@@ -31,9 +32,11 @@ export function Header() {
       <div className="px-6 md:px-12 lg:px-24 py-4 flex items-center justify-between">
         <a
           href="#"
-          className="text-lg font-medium hover:text-primary transition-colors"
+          className="flex items-center gap-2 hover:opacity-80 transition-opacity"
         >
-          AdelGann
+          <img src="/logo.svg" alt="AdelGann Logo" className="h-8 w-auto block dark:hidden" />
+          <img src="/logo-dark.svg" alt="AdelGann Logo" className="h-8 w-auto hidden dark:block" />
+          <span className="text-lg font-medium hidden sm:inline-block">AdelGann</span>
         </a>
 
         <nav className="hidden md:flex items-center gap-8">
@@ -48,12 +51,17 @@ export function Header() {
           ))}
         </nav>
 
-        <a
-          href="mailto:imadelg14@gmail.com"
-          className="text-sm text-muted-foreground hover:text-primary transition-colors"
-        >
-          imadelg14@gmail.com
-        </a>
+        <div className="flex items-center gap-4">
+          <a
+            href="mailto:imadelg14@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-sm text-muted-foreground hover:text-primary transition-colors hidden sm:block"
+          >
+            imadelg14@gmail.com
+          </a>
+          <ModeToggle />
+        </div>
       </div>
     </header>
   );

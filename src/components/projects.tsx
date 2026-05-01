@@ -2,19 +2,27 @@ import { ExternalLink, Github, Folder } from "lucide-react";
 
 const projects = [
   {
-    title: "React Folder Router",
+    title: "Amazing Router React",
     description:
-      "Un router para React basado en el sistema de archivos, inspirado en la estructura de carpetas de Next.js. Permite crear rutas de forma automática basándose en la estructura de directorios del proyecto.",
-    technologies: ["React", "TypeScript", "Vite", "File System API"],
-    github: "#",
-    demo: "#",
+      "Implementación oficial para React de Amazing Router. Facilita la adopción de enrutamiento por carpetas similar a Next.js en aplicaciones Vite/React puras, incluyendo soporte avanzado para layouts anidados, rutas de grupo y hooks de contexto.",
+    technologies: ["React", "TypeScript", "React Router", "Vite"],
+    github: "",
+
+    featured: true,
+  },
+  {
+    title: "Amazing Router Core",
+    description:
+      "Motor central agnóstico para la generación de rutas mediante el sistema de archivos (File-System Routing). Analiza el árbol de directorios en tiempo de construcción, resuelve rutas dinámicas y construye el mapa de navegación optimizado.",
+    technologies: ["TypeScript", "Node.js", "AST", "File System API"],
+    github: "https://github.com/AdelGann/amazing-router-core",
     featured: true,
   },
   {
     title: "Finventa",
     description:
-      "CRM financiero completo para la gestión de ventas, clientes y facturación. Incluye dashboard analítico, reportes automatizados y gestión de inventario.",
-    technologies: ["Next.js", "PostgreSQL", "Tailwind CSS", "Prisma"],
+      "Sistema integral de gestión (CRM/ERP) con enfoque financiero. Diseñado para centralizar la administración de clientes, facturación y ventas, incorporando paneles analíticos interactivos y módulos avanzados de recursos humanos.",
+    technologies: ["React", "Tailwind CSS", "NestJS", "PostgreSQL", "Prisma"],
     github: "#",
     demo: "#",
     featured: true,
@@ -70,7 +78,7 @@ export function Projects() {
                 {project.technologies.map((tech) => (
                   <span
                     key={tech}
-                    className="text-xs text-muted-foreground font-mono"
+                    className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary text-secondary-foreground"
                   >
                     {tech}
                   </span>

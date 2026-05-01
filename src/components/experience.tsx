@@ -2,30 +2,33 @@ import { ExternalLink } from "lucide-react";
 
 const experiences = [
   {
-    period: "2025 — Presente",
-    role: "Desarrollador Web",
+    period: "2026 — Presente",
+    detailed: "Nov 2026 - Actual",
+    role: "Soporte Tecnico",
     company: "Hoot Interactive",
     description:
-      "Desarrollo de aplicaciones web modernas con React y Next.js. Implementación de interfaces de usuario responsivas y optimizadas para el rendimiento.",
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS"],
+      "Diagnóstico y resolución de incidencias de software para clientes, implementando soluciones mediante web scraping y automatización para extraer información, analizar problemas y optimizar procesos técnicos.",
+    technologies: ["HTML", "JavaScript", "Web Scraping"],
     current: true,
   },
   {
-    period: "2024 — 2025",
+    period: "2025 — Presente",
+    detailed: "Abr 2025 - Actual",
     role: "Desarrollador Fullstack",
     company: "Sineryx",
     description:
       "Desarrollo de soluciones web completas, desde el frontend hasta el backend. Integración de APIs y bases de datos. Colaboración en equipos ágiles.",
     technologies: ["React", "Node.js", "PostgreSQL", "REST APIs"],
-    current: false,
+    current: true,
   },
   {
-    period: "2022 — 2024",
+    period: "2024 — 2025",
+    detailed: "Ene 2024 - Abr 2025",
     role: "Desarrollador Web",
     company: "Sempiterno",
     description:
       "Mi primer rol profesional donde crecí como desarrollador. Participé en múltiples proyectos web, aprendiendo las mejores prácticas de la industria y trabajando con tecnologías modernas.",
-    technologies: ["JavaScript", "React", "CSS", "Git"],
+    technologies: ["TypeScript", "React", "CSS", "Git", "REST APIs"],
     current: false,
   },
 ];
@@ -44,13 +47,16 @@ export function Experience() {
               key={index}
               className="group grid md:grid-cols-[180px_1fr] gap-4 md:gap-8"
             >
-              <div className="text-sm text-muted-foreground">
-                {exp.period}
-                {exp.current && (
-                  <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full text-xs bg-primary/10 text-primary">
-                    Actual
-                  </span>
-                )}
+              <div>
+                <div className="text-sm text-muted-foreground">
+                  {exp.period}
+                  {exp.current && (
+                    <span className="ml-2 inline-flex items-center px-2 py-0.5 rounded-full text-xs bg-primary/10 text-primary">
+                      Actual
+                    </span>
+                  )}
+                </div>
+                <div className="text-xs text-muted-foreground">{exp.detailed}</div>
               </div>
 
               <div>
