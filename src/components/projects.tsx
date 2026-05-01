@@ -1,10 +1,12 @@
-import { ExternalLink, Github, Folder } from "lucide-react";
+import { ExternalLink, Folder } from "lucide-react";
+import { IoLogoNpm, IoLogoGithub } from "react-icons/io5";
 
 interface Project {
   title: string;
   description: string;
   technologies: string[];
   github?: string;
+  npm?: string;
   demo?: string;
   featured?: boolean;
 }
@@ -16,6 +18,7 @@ const projects: Project[] = [
       "Implementación oficial para React de Amazing Router. Facilita la adopción de enrutamiento por carpetas similar a Next.js en aplicaciones Vite/React puras, incluyendo soporte avanzado para layouts anidados, rutas de grupo y hooks de contexto.",
     technologies: ["React", "TypeScript", "React Router", "Vite"],
     github: "https://github.com/AdelGann/amazing-router-react",
+    npm: "https://www.npmjs.com/package/@amazing-router/react",
     featured: true,
   },
   {
@@ -24,6 +27,7 @@ const projects: Project[] = [
       "Motor central agnóstico para la generación de rutas mediante el sistema de archivos (File-System Routing). Analiza el árbol de directorios en tiempo de construcción, resuelve rutas dinámicas y construye el mapa de navegación optimizado.",
     technologies: ["TypeScript", "Node.js", "AST", "File System API"],
     github: "https://github.com/AdelGann/amazing-router-core",
+    npm: "https://www.npmjs.com/package/@amazing-router/core",
     featured: true,
   },
   {
@@ -52,13 +56,22 @@ export function Projects() {
               <div className="flex items-start justify-between mb-4">
                 <Folder className="w-10 h-10 text-primary" />
                 <div className="flex items-center gap-3">
+                  {project.npm && (
+                    <a
+                      href={project.npm}
+                      className="text-muted-foreground hover:text-foreground transition-colors"
+                      aria-label="Ver Documentación en NPM"
+                    >
+                      <IoLogoNpm size={32} />
+                    </a>
+                  )}
                   {project.github && (
                     <a
                       href={project.github}
                       className="text-muted-foreground hover:text-foreground transition-colors"
                       aria-label="Ver código en GitHub"
                     >
-                      <Github className="w-5 h-5" />
+                      <IoLogoGithub className="w-5 h-5" />
                     </a>
                   )}
                   {project.demo && (

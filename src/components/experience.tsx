@@ -3,7 +3,7 @@ import { ExternalLink } from "lucide-react";
 const experiences = [
   {
     period: "2026 — Presente",
-    detailed: "Nov 2026 - Actual",
+    detailed: "Abr 2026 - Actual",
     role: "Soporte Tecnico",
     company: "Hoot Interactive",
     description:
@@ -56,7 +56,9 @@ export function Experience() {
                     </span>
                   )}
                 </div>
-                <div className="text-xs text-muted-foreground">{exp.detailed}</div>
+                <div className="text-xs text-muted-foreground">
+                  {exp.detailed}
+                </div>
               </div>
 
               <div>

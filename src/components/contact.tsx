@@ -1,15 +1,16 @@
-import { Github, Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
+import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io5";
 
 const socialLinks = [
   {
     name: "GitHub",
     href: "https://github.com/AdelGann",
-    icon: Github,
+    icon: IoLogoGithub,
   },
   {
     name: "LinkedIn",
     href: "https://www.linkedin.com/in/adel-gannem/",
-    icon: Linkedin,
+    icon: IoLogoLinkedin,
   },
   {
     name: "Email",
@@ -61,7 +62,7 @@ export function Contact() {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full bg-background border border-border hover:bg-secondary hover:-translate-y-1 transition-all duration-300 font-medium"
           >
-            <Linkedin className="w-5 h-5" />
+            <IoLogoLinkedin className="w-5 h-5" />
             Conectar en LinkedIn
           </a>
         </div>
