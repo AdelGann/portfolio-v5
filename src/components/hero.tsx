@@ -19,8 +19,8 @@ const stats = [
 export function Hero() {
   return (
     <section className="min-h-screen flex flex-col justify-center px-6 md:px-12 lg:px-24 py-20 relative overflow-hidden">
-      <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-primary/20 dark:bg-primary/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-primary/15 dark:bg-primary/3 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-primary/20 dark:bg-primary/5 rounded-full blur-2xl md:blur-3xl pointer-events-none will-change-transform" />
+      <div className="absolute bottom-1/4 left-1/3 w-96 h-96 bg-primary/15 dark:bg-primary/3 rounded-full blur-2xl md:blur-3xl pointer-events-none will-change-transform" />
 
       <div className="relative z-10">
         <div className="flex flex-wrap items-center gap-3 mb-8">
@@ -82,7 +82,7 @@ export function Hero() {
             >
               <Mail className="w-4 h-4 mr-2" />
               Hablemos
-              <span className="ml-2 text-primary-foreground/60 group-hover:text-primary-foreground transition-colors">
+              <span className="ml-2 text-primary-foreground/80 group-hover:text-primary-foreground transition-colors">
                 imadelg14@gmail.com
               </span>
             </a>
