@@ -25,7 +25,9 @@ export default defineConfig({
       output: {
         manualChunks: (id) => {
           if (id.includes("node_modules")) {
-            if (id.includes("react") || id.includes("react-dom")) return "react-vendor";
+            if (id.includes("/node_modules/react/") || id.includes("/node_modules/react-dom/")) {
+              return "react-vendor";
+            }
             if (id.includes("@radix-ui")) return "radix-ui";
             if (id.includes("lucide-react")) return "lucide";
             return "vendor";
@@ -33,5 +35,7 @@ export default defineConfig({
         },
       },
     },
+    minify: "esbuild",
+    cssCodeSplit: true,
   },
 });
