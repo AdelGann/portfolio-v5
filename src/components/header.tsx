@@ -34,8 +34,8 @@ export function Header() {
           href="#"
           className="flex items-center gap-2 hover:opacity-80 transition-opacity"
         >
-          <img src="/logo.svg" alt="AdelGann Logo" className="h-8 w-auto block dark:hidden" />
-          <img src="/logo-dark.svg" alt="AdelGann Logo" className="h-8 w-auto hidden dark:block" />
+          <img src="/logo.svg" alt="AdelGann Logo" width="32" height="32" className="h-8 w-auto block dark:hidden" />
+          <img src="/logo-dark.svg" alt="AdelGann Logo" width="32" height="32" className="h-8 w-auto hidden dark:block" />
           <span className="text-lg font-medium hidden sm:inline-block">AdelGann</span>
         </a>
 

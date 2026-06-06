@@ -20,4 +20,18 @@ export default defineConfig({
       "amazing-router-route-files": path.resolve(__dirname, "./.amazing-router/routeFiles.ts"),
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: (id) => {
+          if (id.includes("node_modules")) {
+            if (id.includes("react") || id.includes("react-dom")) return "react-vendor";
+            if (id.includes("@radix-ui")) return "radix-ui";
+            if (id.includes("lucide-react")) return "lucide";
+            return "vendor";
+          }
+        },
+      },
+    },
+  },
 });

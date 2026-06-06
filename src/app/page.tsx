@@ -1,8 +1,10 @@
+import { Suspense, lazy } from "react";
 import { Header } from "@/components/header";
 import { Hero } from "@/components/hero";
-import { Experience } from "@/components/experience";
-import { Projects } from "@/components/projects";
-import { Contact } from "@/components/contact";
+
+const Experience = lazy(() => import("@/components/experience").then(m => ({ default: m.Experience })));
+const Projects = lazy(() => import("@/components/projects").then(m => ({ default: m.Projects })));
+const Contact = lazy(() => import("@/components/contact").then(m => ({ default: m.Contact })));
 
 export const metadata = {
   title: "Adel Gannem - Developer",
@@ -16,9 +18,11 @@ export default function Page() {
     <main className="min-h-screen">
       <Header />
       <Hero />
-      <Experience />
-      <Projects />
-      <Contact />
+      <Suspense fallback={<div className="h-screen w-full flex items-center justify-center"><div className="w-8 h-8 rounded-full border-4 border-primary border-t-transparent animate-spin"></div></div>}>
+        <Experience />
+        <Projects />
+        <Contact />
+      </Suspense>
     </main>
   );
 }
