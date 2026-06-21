@@ -2,16 +2,6 @@ import { ExternalLink } from "lucide-react";
 
 const experiences = [
   {
-    period: "2026 — Presente",
-    detailed: "Abr 2026 - Actual",
-    role: "Soporte Tecnico",
-    company: "Hoot Interactive",
-    description:
-      "Diagnóstico y resolución de incidencias de software para clientes, implementando soluciones mediante web scraping y automatización para extraer información, analizar problemas y optimizar procesos técnicos.",
-    technologies: ["HTML", "JavaScript", "Web Scraping"],
-    current: true,
-  },
-  {
     period: "2025 — Presente",
     detailed: "Abr 2025 - Actual",
     role: "Desarrollador Fullstack",
@@ -43,10 +33,7 @@ export function Experience() {
 
         <div className="space-y-12">
           {experiences.map((exp, index) => (
-            <div
-              key={index}
-              className="group grid md:grid-cols-[180px_1fr] gap-4 md:gap-8"
-            >
+            <div key={index} className="group grid md:grid-cols-[180px_1fr] gap-4 md:gap-8">
               <div>
                 <div className="text-sm text-muted-foreground">
                   {exp.period}
@@ -56,9 +43,7 @@ export function Experience() {
                     </span>
                   )}
                 </div>
-                <div className="text-xs text-muted-foreground">
-                  {exp.detailed}
-                </div>
+                <div className="text-xs text-muted-foreground">{exp.detailed}</div>
               </div>
 
               <div>
@@ -66,9 +51,7 @@ export function Experience() {
                   {exp.role} · {exp.company}
                   <ExternalLink className="inline-block w-4 h-4 ml-2 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </h3>
-                <p className="text-muted-foreground leading-relaxed mb-4">
-                  {exp.description}
-                </p>
+                <p className="text-muted-foreground leading-relaxed mb-4">{exp.description}</p>
                 <div className="flex flex-wrap gap-2">
                   {exp.technologies.map((tech) => (
                     <span
